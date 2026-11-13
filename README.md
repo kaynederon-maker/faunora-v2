@@ -6,12 +6,13 @@
 
 A Venture Creation project at BINUS University, 2026.
 
-- **Website (V2, the 3D house):** https://kaynederon-maker.github.io/faunora/
+- **Website (V2, the 3D house):** https://kaynederon-maker.github.io/faunora-v2/
 - **Film (3 min), "Long Walks":** [video/Faunora_Ad_3min.mp4](video/Faunora_Ad_3min.mp4)
 - **Film (90 s), "From the land to the bowl":** [video/Faunora_Ad_90s.mp4](video/Faunora_Ad_90s.mp4)
 
-> **V2** replaces the scrolling page with one interactive 3D house. The previous site is kept at the
-> [`v1.0`](../../tree/v1.0) tag; this release is tagged `v2.0`.
+> **V2** replaces the scrolling page with one interactive 3D house. The first version lives in its own
+> repository, [kaynederon-maker/faunora](https://github.com/kaynederon-maker/faunora)
+> (live at https://kaynederon-maker.github.io/faunora/).
 
 ## The website (V2)
 
