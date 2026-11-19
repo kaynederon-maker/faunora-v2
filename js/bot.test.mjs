@@ -66,4 +66,7 @@ assert.equal(said(createBot({}), 'can I call you?').action, 'book');
 assert.equal(said(bot(), 'How much is a session?').intent, 'price');
 assert.match(said(bot(), 'halo, berapa kali sehari makan?').text, /Bahasa Indonesia/);
 
+assert.equal(said(bot(), 'Do you have Instagram?').intent, 'social');
+assert.equal(said(bot(), 'tiktok kalian apa?').intent, 'social');
+
 console.log(`bot.test: all checks passed (${chips.size} chips verified)`);

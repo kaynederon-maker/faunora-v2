@@ -62,7 +62,8 @@ function populate(tickers) {
 function room(root, col, f, floor, wall, o = {}) {
   const g = G([col ? W / 2 : -W / 2, floorY(f), floorZ(f)], [], { in: root });
   const h = o.wallH ?? CEILING - 0.02;
-  box(W - 0.02, 0.04, D - 0.02, floor, { at: [0, -0.04, 0], r: 0.015, in: g, cast: false });
+  // Top sits 12 mm above the slab under it: coplanar tops z-fight (the ground floor used to flicker).
+  box(W - 0.02, 0.04, D - 0.02, floor, { at: [0, -0.028, 0], r: 0.015, in: g, cast: false });
   if (o.walls === false) return g;
   box(W, h, 0.2, wall, { at: [0, 0, -D / 2 + 0.1], r: 0.03, in: g });
   box(W - 0.4, 0.1, 0.03, C.white, { at: [0.1, 0, BACK + 0.012], r: 0.01, in: g, cast: false });
@@ -240,7 +241,7 @@ function story(root) {
 
 function team(root) {
   const g = room(root, 1, 2, 0xE2CFAE, C.cream, { walls: false });
-  for (let i = 0; i < 9; i++) box(0.012, 0.01, D - 0.1, C.woodDark, { at: [-W / 2 + 0.6 + i * 0.6, 0, 0], in: g, cast: false });
+  for (let i = 0; i < 9; i++) box(0.012, 0.006, D - 0.1, C.woodDark, { at: [-W / 2 + 0.6 + i * 0.6, 0.011, 0], in: g, cast: false });
   box(W, 0.9, 0.2, C.cream, { at: [0, 0, -D / 2 + 0.1], r: 0.05, in: g });
   box(W + 0.06, 0.08, 0.3, C.white, { at: [0, 0.9, -D / 2 + 0.1], r: 0.035, in: g, cast: false });
   cast(g, 'sign_faunora', [-1.05, 0.98, -D / 2 + 0.12], 0.3, 1.2, { still: true });   // the wordmark stands on the parapet

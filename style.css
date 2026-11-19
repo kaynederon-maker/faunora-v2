@@ -401,3 +401,24 @@ a { color: inherit; }
 @media (prefers-reduced-motion: reduce) {
   .online i, .call-avatar::before, .call-avatar::after { animation: none; }
 }
+
+/* ---------- Social accounts ---------- */
+.socials { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: .55rem; }
+.socials a {
+  display: inline-flex; align-items: center; gap: .55rem; padding: .38rem 1rem .38rem .4rem; border-radius: 99px;
+  border: 1px solid var(--line); background: rgba(250, 248, 240, .65); color: var(--ink); text-decoration: none;
+  font-size: .88rem; line-height: 1.15; transition: border-color .3s var(--ease), background .3s var(--ease), transform .3s var(--ease);
+}
+.socials a:hover { border-color: var(--sage-deep); background: #fff; transform: translateY(-2px); }
+.socials svg {
+  flex: none; width: 32px; height: 32px; padding: 6px; border-radius: 50%; background: rgba(169, 183, 154, .32); color: var(--sage-deep);
+  fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round;
+}
+.socials span { display: grid; text-align: left; }
+.socials small { font-size: .66rem; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-soft); }
+.socials.icons a { padding: 0; border-color: transparent; background: none; }
+.socials.icons span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.socials.icons svg { width: 40px; height: 40px; padding: 9px; background: rgba(250, 248, 240, .8); box-shadow: 0 0 0 1px rgba(79, 75, 67, .15); }
+.socials.icons a:hover svg { background: #fff; color: var(--ink); }
+.follow { margin: 1.6rem 0 .7rem; font-size: .72rem; letter-spacing: .22em; text-transform: uppercase; color: var(--ink-soft); }
+.follow b { font-weight: 500; letter-spacing: .06em; text-transform: none; font-size: .9rem; color: var(--sage-deep); }

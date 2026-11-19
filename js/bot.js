@@ -236,6 +236,9 @@ const INTENTS = [
     reply: s => (s.booked
       ? { action: 'call', text: `Of course. Tap the phone icon at the top of this chat and we can talk it through.` }
       : { action: 'book', text: `Calls open once you have a session booked, so your nutritionist has ${s.pet === 'your pet' ? "your pet's" : `${s.pet}'s`} details in front of them.`, chips: ['What does it cost?'] }) },
+  { id: 'social',
+    re: /\b(instagram|insta|ig|threads|tiktok|tik tok|social media|sosmed|socials|follow you|your account)\b/i,
+    reply: () => ({ text: `We're @fau.nora everywhere: Instagram (instagram.com/fau.nora), Threads (threads.com/@fau.nora) and TikTok (tiktok.com/@fau.nora). You'll find kitchen days, new recipes and plenty of happy pets. The links are at the top of the house and in the footer.`, chips: ['What does it cost?', 'How much should I feed?'] }) },
   { id: 'identity',
     re: /\b(are you (a |an )?(bot|robot|real|human|ai|person)|who are you|siapa (kamu|anda)|chatgpt|artificial)\b/i,
     reply: s => ({ text: `Honest answer: in this prototype my replies are simulated from a nutrition knowledge base, so treat them as general guidance. In the real service you would be talking to ${s.personaName}, and nothing replaces an examination by your own vet.`, chips: ['How much should I feed?', 'What treats are safe?'] }) },
